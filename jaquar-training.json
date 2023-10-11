@@ -1,0 +1,2182 @@
+{
+    "intents": [
+        {
+            "tag": "feedback",
+            "pattern": [
+                "i want to provide feedback",
+                "feedback",
+                "i want to share my opinions",
+                "i want to share my experience",
+                "i want to share my experience with you",
+                "how can I give feedback"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Please fill up the following details to provide your feedback.",
+                            "label_type": "default",
+                            "label_value": "feedback"
+                        }
+                    },
+                    {
+                        "type": "form",
+                        "element": {
+                            "form_title": "Feedback Form",
+                            "form_description": null,
+                            "form_items": [
+                                {
+                                    "textinput_placeholder": "Please provide your name",
+                                    "textinput_type": "default",
+                                    "textinput_value": "name"
+                                },
+                                {
+                                    "textinput_placeholder": "Please provide your Email",
+                                    "textinput_type": "email",
+                                    "textinput_value": "email"
+                                },
+                                {
+                                    "textinput_placeholder": "Please provide your feedback",
+                                    "textinput_type": "multiline",
+                                    "textinput_value": "feedback"
+                                }
+                            ],
+                            "form_submit_button": {
+                                "button_text": "Submit",
+                                "button_value": "feedback_exit",
+                                "button_type": "submit",
+                                "button_url_redirect": null,
+                                "icon_url": null
+                            }
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "feedback_exit",
+            "pattern": [
+                "feedback_exit"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Thank you for your time in giving us feedback.",
+                            "label_type": "default",
+                            "label_value": "feedback_exit"
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Would you like to continue?",
+                            "label_type": "default",
+                            "label_value": "feedback_exit"
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Yes",
+                                    "button_value": "main_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "No",
+                                    "button_value": "exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "choose_options"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "welcome",
+            "pattern": [
+                "Hi",
+                "Hello",
+                "Hey",
+                "heyy"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Welcome to Jaquar - A Complete bathroom & lighting solutions brand.",
+                            "label_type": "default",
+                            "label_value": "welcome_msg"
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "I am Jaq - Your virtual assistant. How may I help you today?",
+                            "label_type": "default",
+                            "label_value": "welcome_msg"
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Please select an option from the menu below.",
+                            "label_type": "default",
+                            "label_value": "welcome_msg"
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Customer",
+                                    "button_value": "Customer",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Professional",
+                                    "button_value": "Professional",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Call Purchase Assistant",
+                                    "button_value": "Call Purchase Assistant",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Orientation Center Virtual Tour",
+                                    "button_value": "Orientation Center Virtual Tour",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Customer Service",
+                                    "button_value": "Customer Service",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Dealer Location",
+                                    "button_value": "Dealer Location",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Download Our Mobile Apps",
+                                    "button_value": "Download Our Mobile Apps",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Visit Our Social Media Handles",
+                                    "button_value": "Visit Our Social Media Handles",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "choose_options"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "main_menu",
+            "pattern": [
+                "main_menu",
+                "Main Menu"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "How may I help you today?",
+                            "label_type": "default",
+                            "label_value": "main_menu"
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Please select an option from the menu below.",
+                            "label_type": "default",
+                            "label_value": "main_menu"
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Customer",
+                                    "button_value": "Customer",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Professional",
+                                    "button_value": "Professional",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Call Purchase Assistant",
+                                    "button_value": "Call Purchase Assistant",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Orientation Center Virtual Tour",
+                                    "button_value": "Orientation Center Virtual Tour",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Customer Service",
+                                    "button_value": "Customer Service",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Dealer Location",
+                                    "button_value": "Dealer Location",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Download Our Mobile App",
+                                    "button_value": "Download Our Mobile App",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Visit Our Social Media Handles",
+                                    "button_value": "Visit Our Social Media Handles",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "choose_options"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "customer",
+            "pattern": [
+                "Customer"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Please select an option from the menu below.",
+                            "label_type": "default",
+                            "label_value": "customer"
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Bathroom Products",
+                                    "button_value": "Bathroom Products",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Lighting Products",
+                                    "button_value": "Lighting Products",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Call Purchase Assistant",
+                                    "button_value": "Call Purchase Assistant",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Orientation Center Virtual Tour",
+                                    "button_value": "Orientation Center Virtual Tour",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Dealer Location",
+                                    "button_value": "Dealer Location",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Download Our Mobile App",
+                                    "button_value": "Download Our Mobile App",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Visit Our Social Media Handles",
+                                    "button_value": "Visit Our Social Media Handles",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "choose_options"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "bathroom_products",
+            "pattern": [
+                "Bathroom Products",
+                "bathroom_products",
+                "Bathroom"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Jaquar is into complete bathroom solutions. Please select from the menu given below",
+                            "label_type": "default",
+                            "label_value": "bathroom_products"
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Bathroom products",
+                            "url_url": "https://www.jaquar.com/en/jaquar-products",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "choose_options"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "lighting_products",
+            "pattern": [
+                "Lighting Products",
+                "lighting_products",
+                "Lighting"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "We have categorized our lighting products in two different sections please choose from below.",
+                            "label_type": "default",
+                            "label_value": "lighting_products"
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Professional Lighting",
+                            "url_url": "https://www.jaquarlighting.com/professional-lighting?redirect=professional",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Consumer Lighting",
+                            "url_url": "https://www.jaquarlighting.com/consumer-lighting?redirect=consumer",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "choose_options"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "call_purchase_assistant",
+            "pattern": [
+                "Call Purchase Assistant",
+                "call_purchase_assistant"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "If you need any help we are one call away from you please feel free to call us at anytime.",
+                            "label_type": "default",
+                            "label_value": "call_purchase_assistant"
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "1800-120-332222",
+                            "url_url": "tel://1800-120-332222",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Other queries",
+                                    "button_value": "Other queries",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "choose_options"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "other_queries",
+            "pattern": [
+                "Other queries",
+                "other_queries"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Contact Us",
+                            "url_url": "https://www.jaquar.com/en/contactus?redirect=contact",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Feedback/ Suggestions",
+                                    "button_value": "Feedback",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "FAQ",
+                                    "button_value": "FAQ",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "choose_options"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "faq",
+            "pattern": [
+                "FAQ",
+                "Frequently asked questions",
+                "i want to know more"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Please choose from the options below",
+                            "label_type": "default",
+                            "label_value": "faq"
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Can we buy the products from Jaquar orientation centre?",
+                                    "button_value": "Can we buy the products from Jaquar orientation centre?",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Where do I get Jaquar Orientation Center addresses? Or how can I locate Jaquar orientation centres?",
+                                    "button_value": "Where do I get Jaquar Orientation Center addresses? Or how can I locate Jaquar orientation centres?",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "What is PMS and PMC?",
+                                    "button_value": "What is PMS and PMC?",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "How to avoid slipping danger from the bathroom?",
+                                    "button_value": "How to avoid slipping danger from the bathroom?",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "What do you mean by Jaquar complete bathing solutions?",
+                                    "button_value": "What do you mean by Jaquar complete bathing solutions?",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Can LED lighting harm our eyesight?",
+                                    "button_value": "Can LED lighting harm our eyesight?",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Are LED light bulbs worth the money?",
+                                    "button_value": "Are LED light bulbs worth the money?",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "What are the best light bulbs for enclosures?",
+                                    "button_value": "What are the best light bulbs for enclosures?",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "choose_options"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "exit",
+            "pattern": [
+                "Exit",
+                "bye"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Thank you for giving your time.",
+                            "label_type": "default",
+                            "label_value": null
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Have a nice day, Bye.",
+                            "label_type": "default",
+                            "label_value": null
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "center_virtual_tour",
+            "pattern": [
+                "View Orientation Center Virtual Tour",
+                "Orientation Center Virtual Tour",
+                "center_virtual_tour"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Is there anything else I can assist you with?",
+                            "label_type": "default",
+                            "label_value": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Call Purchase Assistant",
+                                    "button_value": "Call Purchase Assistant",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Locate the nearest dealer",
+                                    "button_value": "Locate the nearest dealer",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "View Orientation Center Virtual Tour"
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "View Orientation Center Virtual Tour",
+                            "url_url": "https://www.jaquar.com/en/self-tour?redirect=orientation",
+                            "url_text": null
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "dealer_location",
+            "pattern": [
+                "dealer_location",
+                "Locate the nearest dealer",
+                "Dealer Location",
+                "Jaguar Dealer",
+                "Jaguar Lighting Dealer"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Find out our nearest dealer locator for Jaquar and Jaquar lighting solutions.",
+                            "label_type": "default",
+                            "label_value": null
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Locate Dealers",
+                            "url_url": "https://www.jaquar.com/en/find-dealers",
+                            "url_text": null
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "download_catalogue",
+            "pattern": [
+                "Download Customer catalogue",
+                "download_customer_catalogue"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "You can download our product catalogue to find out more about our exquisite designs!",
+                            "label_type": "default",
+                            "label_value": null
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Bathroom catalogue",
+                            "url_url": "https://www.jaquar.com/pdf/customer-guide-vol18.2.pdf",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Lighting catalogue",
+                            "url_url": "https://www.jaquarlighting.com/catalogue",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Download Customer catalogue"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "customer_service",
+            "pattern": [
+                "Customer Service",
+                "customer_service"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Thank you for contacting Jaquar customer care.",
+                            "label_type": "default",
+                            "label_value": null
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "We are available Monday-Saturday 9:00 AM to 6:00 PM",
+                            "label_type": "default",
+                            "label_value": null
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Customer Support For lighting",
+                            "label_type": "default",
+                            "label_value": null
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "1800-212-6808",
+                            "url_url": "tel://1800-212-6808",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Customer support for Bathroom",
+                            "label_type": "default",
+                            "label_value": null
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "1800-121-6808",
+                            "url_url": "tel://1800-121-6808",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Customer Service"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "download_app",
+            "pattern": [
+                "Download Our Mobile App",
+                "download_app"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "You can download our product catalogue to find out more about our exquisite designs!",
+                            "label_type": "default",
+                            "label_value": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "App Store",
+                                    "button_value": "App Store",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Google Play",
+                                    "button_value": "Google Play",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Download Our Mobile Apps"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "app_store",
+            "pattern": [
+                "App Store",
+                "apple app",
+                "apple store",
+                "ios app"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "App Store Url",
+                            "url_url": "https://apps.apple.com/in/app/jaquar/id1326726197",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "App Store"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "google_play",
+            "pattern": [
+                "Google Play",
+                "android app",
+                "google app",
+                "google_play"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Google Play Url",
+                            "url_url": "https://play.google.com/store/apps/details?id=com.agbe.jaquar&hl=en_IN",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Google Play"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "social_media",
+            "pattern": [
+                "Social Media",
+                "social_media",
+                "Visit Our Social Media Handles"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "LinkedIn",
+                                    "button_value": "LinkedIn",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Twitter",
+                                    "button_value": "Twitter",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Facebook",
+                                    "button_value": "Facebook",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "YouTube",
+                                    "button_value": "YouTube",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Instagram",
+                                    "button_value": "Instagram",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Social Media"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "professional",
+            "pattern": [
+                "Professional"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Architect / Interior designer",
+                                    "button_value": "professional_flow_1",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Builder/Consultant",
+                                    "button_value": "professional_flow_1",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Retailer",
+                                    "button_value": "professional_flow_1",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Contractor",
+                                    "button_value": "professional_flow_1",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Lighting consultant",
+                                    "button_value": "professional_flow_1",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Plumber",
+                                    "button_value": "professional_flow_2",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Electricians",
+                                    "button_value": "professional_flow_2",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Generate BOQ",
+                                    "button_value": "professional_flow_1",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Newsletter Updates",
+                                    "button_value": "professional_flow_1",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Professional"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "professional_flow_1",
+            "pattern": [
+                "professional_flow_1"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Please fill up the following details.",
+                            "label_type": "default",
+                            "label_value": "flow1"
+                        }
+                    },
+                    {
+                        "type": "form",
+                        "element": {
+                            "form_title": "Contact Details",
+                            "form_description": null,
+                            "form_items": [
+                                {
+                                    "textinput_placeholder": "Please enter your name",
+                                    "textinput_type": "default",
+                                    "textinput_value": "name"
+                                },
+                                {
+                                    "textinput_placeholder": "Please enter your Email",
+                                    "textinput_type": "email",
+                                    "textinput_value": "email"
+                                },
+                                {
+                                    "textinput_placeholder": "Please enter your Phone Number",
+                                    "textinput_type": "phone",
+                                    "textinput_value": "phone"
+                                }
+                            ],
+                            "form_submit_button": {
+                                "button_text": "Submit",
+                                "button_value": "flow_1",
+                                "button_type": "submit",
+                                "button_url_redirect": null,
+                                "icon_url": null
+                            }
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "professional_flow_2",
+            "pattern": [
+                "professional_flow_2"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Please fill up the following details.",
+                            "label_type": "default",
+                            "label_value": "flow2"
+                        }
+                    },
+                    {
+                        "type": "form",
+                        "element": {
+                            "form_title": "Contact Details",
+                            "form_description": null,
+                            "form_items": [
+                                {
+                                    "textinput_placeholder": "Please enter your name",
+                                    "textinput_type": "default",
+                                    "textinput_value": "name"
+                                },
+                                {
+                                    "textinput_placeholder": "Please enter your Email",
+                                    "textinput_type": "email",
+                                    "textinput_value": "email"
+                                }
+                            ],
+                            "form_submit_button": {
+                                "button_text": "Submit",
+                                "button_value": "flow_2",
+                                "button_type": "submit",
+                                "button_url_redirect": null,
+                                "icon_url": null
+                            }
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "flow_1",
+            "pattern": [
+                "flow_1"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Download professional catalogue",
+                                    "button_value": "Download professional catalogue",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "CAD drawings",
+                                    "button_value": "CAD drawings",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Product 3D view",
+                                    "button_value": "Product 3D view",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Locate dealers",
+                                    "button_value": "Dealer Location",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Call purchase assistant",
+                                    "button_value": "Call purchase assistant",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Orientation centre virtual tour",
+                                    "button_value": "Orientation centre virtual tour",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "New Arrivals",
+                                    "button_value": "New Arrivals",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Bathroom Products",
+                                    "button_value": "Bathroom Products",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Lighting Products",
+                                    "button_value": "Lighting Products",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Output step 1"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "download_professional_catalogue",
+            "pattern": [
+                "download_professional_catalogue",
+                "download professional catalogue"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Is there anything else I can assist you with?",
+                            "label_type": "default",
+                            "label_value": "download_professional_catalogue"
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "View professional catalogue here",
+                            "url_url": "https://view.publitas.com/jaquar/technical-catalogue-for-jaquar/",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Call Purchase Assistant",
+                                    "button_value": "Call Purchase Assistant",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Locate the nearest dealer",
+                                    "button_value": "dealer location",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Output step 1"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "cad_drawings",
+            "pattern": [
+                "cad_drawings",
+                "cad",
+                "cad drawings"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Is there anything else I can assist you with?",
+                            "label_type": "default",
+                            "label_value": "cad_drawings"
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "View CAD drawings here",
+                            "url_url": "https://cloud.jaquar.com/jcloud/index.php/s/4EXEgiBzgH89SxA",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Call Purchase Assistant",
+                                    "button_value": "Call Purchase Assistant",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Locate the nearest dealer",
+                                    "button_value": "dealer location",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Output step 1"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "product_3d_view",
+            "pattern": [
+                "product_3d_view",
+                "product 3d view"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Is there anything else I can assist you with?",
+                            "label_type": "default",
+                            "label_value": "product_3d_view"
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Watch Product 3D view here",
+                            "url_url": "https://3dwarehouse.sketchup.com/by/jaquar",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Call Purchase Assistant",
+                                    "button_value": "Call Purchase Assistant",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Locate the nearest dealer",
+                                    "button_value": "Dealer Location",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Output step 1"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "new_arrivals",
+            "pattern": [
+                "new_arrivals",
+                "New Arrivals"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Is there anything else I can assist you with?",
+                            "label_type": "default",
+                            "label_value": "new_arrivals"
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Watch New Arrivals here",
+                            "url_url": "https://www.jaquar.com/en/new-arrival?redirect=arrival",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Call Purchase Assistant",
+                                    "button_value": "Call Purchase Assistant",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Locate the nearest dealer",
+                                    "button_value": "Dealer Location",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Output step 1"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "flow_2",
+            "pattern": [
+                "flow_2"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Professional catalogue",
+                                    "button_value": "Download professional catalogue",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Installation video",
+                                    "button_value": "CAD drawings",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Catalogue download",
+                                    "button_value": "Orientation centre virtual tour",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "New Arrivals",
+                                    "button_value": "New Arrivals",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Output step 2"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "installation_video",
+            "pattern": [
+                "installation_video",
+                "installation video",
+                "youtube video installation"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Is there anything else I can assist you with?",
+                            "label_type": "default",
+                            "label_value": "installation_video"
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "video_url": "https://www.youtube.com/playlist?list=PLh8cYkXxhmec_wQDaNSvo485ZlxGcYIPR",
+                            "video_title": "Watch Installation video here",
+                            "video_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Call Purchase Assistant",
+                                    "button_value": "Call Purchase Assistant",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Locate the nearest dealer",
+                                    "button_value": "Dealer Location",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Output step 1"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "catalogue_download",
+            "pattern": [
+                "catalogue_download",
+                "catalogue download",
+                "download catalogue"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "Is there anything else I can assist you with?",
+                            "label_type": "default",
+                            "label_value": "catalogue_download"
+                        }
+                    },
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Download  Catalogue here",
+                            "url_url": "https://www.jaquar.com/pdf/customer-guide-vol18.2.pdf",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Call Purchase Assistant",
+                                    "button_value": "Call Purchase Assistant",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Locate the nearest dealer",
+                                    "button_value": "Dealer Location",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Go back to Previous Menu",
+                                    "button_value": "previous_menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "Output step 1"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "linkedin",
+            "pattern": [
+                "LinkedIn",
+                "linkedin account",
+                "linkedin page"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Check our linkedIn",
+                            "url_url": "https://www.linkedin.com/checkpoint/challengesV2/AQEbVoUWDVezVwAAAYAno8EygFDlBJ5y6NDfxBej4Bl1M0pYMW5u8jZjGMjieQgnDotqEn9oxHS-MDxY2c4-f7nbTsFzE9H4Bg?original_referer=https%3A%2F%2Fchatbot.hellotars.com%2F",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "social_links"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "twitter",
+            "pattern": [
+                "Twitter",
+                "twitter account",
+                "twitter page"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Check our Twitter",
+                            "url_url": "https://twitter.com/jaquargroup",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "social_links"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "facebook",
+            "pattern": [
+                "Facebook",
+                "facebook account",
+                "facebook page"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Check our Facebook",
+                            "url_url": "https://www.facebook.com/JaquarIndia",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "social_links"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "youtube",
+            "pattern": [
+                "YouTube",
+                "youtube account",
+                "youtube page"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Check our YouTube",
+                            "url_url": "https://www.youtube.com/user/jaquarindia",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "social_links"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "instagram",
+            "pattern": [
+                "Instagram",
+                "instagram account",
+                "instagram page"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "url",
+                        "element": {
+                            "url_title": "Check our Instagram",
+                            "url_url": "https://www.instagram.com/jaquarindia/",
+                            "url_text": null
+                        }
+                    },
+                    {
+                        "type": "list",
+                        "element": {
+                            "list_items": [
+                                {
+                                    "button_text": "Go back to Main Menu",
+                                    "button_value": "Main Menu",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                },
+                                {
+                                    "button_text": "Exit",
+                                    "button_value": "Exit",
+                                    "button_type": "default",
+                                    "button_url_redirect": null,
+                                    "icon_url": null
+                                }
+                            ],
+                            "list_value": "social_links"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        },
+        {
+            "tag": "faq_set",
+            "pattern": [
+                "Can we buy the products from Jaquar orientation centre?",
+                "Where do I get Jaquar Orientation Center addresses? Or how can I locate Jaquar orientation centres?",
+                "What is PMS and PMC?",
+                "How to avoid slipping danger from the bathroom?",
+                "What do you mean by Jaquar complete bathing solutions?",
+                "Can LED lighting harm our eyesight?",
+                "Are LED light bulbs worth the money??",
+                "What are the best light bulbs for enclosure"
+            ],
+            "response": {
+                "response_items": [
+                    {
+                        "type": "label",
+                        "element": {
+                            "label_body": "psuedo label",
+                            "label_type": "default",
+                            "label_value": "psuedo_label"
+                        }
+                    }
+                ],
+                "context": null
+            }
+        }
+    ]
+}

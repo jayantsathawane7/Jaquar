@@ -1,0 +1,11 @@
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBCYDwcfwVZA4tJxZWyCdVEOWjxqJAv_zI",
+  authDomain: "fir-aab4b.firebaseapp.com",
+  databaseURL: "https://fir-aab4b-default-rtdb.firebaseio.com",
+  projectId: "fir-aab4b",
+  storageBucket: "fir-aab4b.appspot.com",
+  messagingSenderId: "582881782012",
+  appId: "1:582881782012:web:a6fc25b5a5db5774660f79",
+  measurementId: "G-6EMQTY8STF"
+};
